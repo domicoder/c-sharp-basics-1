@@ -47,7 +47,7 @@ dotnet build
 # run
 dotnet run
 
-# Punblish the project
+# Publish the project
 dotnet publish -c Release -o ./publish
 ```
 
