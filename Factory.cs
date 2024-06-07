@@ -23,7 +23,7 @@ public class Factory {
         FindingGreaterAndLessThan();
         break;
       case 4:
-        Console.WriteLine("WIP!");
+        ChristmasTree();
         break;
       case 5:
       default:
@@ -65,5 +65,46 @@ public class Factory {
     Console.WriteLine($"The greater number is: {MathsFactory.FindingGreater(numbers)}");
     Console.WriteLine($"The smaller number is: {MathsFactory.FindingLessThan(numbers)}");
     Console.ReadLine();
+  }
+
+  public static void ChristmasTree() {
+    const int size = 2 * 6;
+
+    // Crown [Tree]
+    for  (int i = 0; i < size; i++)
+    {
+      for  (int k = 0; k < ((size) - i + 1); k++)
+      {
+        Console.Write(" ");
+      }
+      for  (int j = 0; j < ((2 * i ) - 1); j++)
+      {
+        Console.Write("*");
+      }
+      Console.WriteLine("");
+    }
+
+    // Trunk [Tree]
+    for (int i = 0; i < 3; i++)
+    {
+      if (i < 2)
+      {
+        for (int j = 0; j <= (size - i + 1); j++)
+        {
+          string draft = (j == size) ? "||" : " ";
+          Console.Write($"{draft}");
+        }
+        Console.WriteLine("");
+      }
+      else
+      {
+        for (int j = 0; j <= ((2*size) - i + 1); j++)
+        {
+          string draft = (j == size) ? "||" : "_";
+          Console.Write($"{draft}");
+        }
+        Console.WriteLine("");
+      }
+    }
   }
 }
