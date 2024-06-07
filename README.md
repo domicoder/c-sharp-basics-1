@@ -59,7 +59,7 @@ dotnet publish -c Release -o ./publish
     -   We are covering:
         -   Homework `Hola Mundo` in branch `main`.
         -   Homework `Programa consola` in branch `main`.
-        -   Homework `Mayor y menor` in branch `feature/greater-than-or-equal-to`.
+        -   Homework `Mayor y menor` in branch `feature/greater-than-and-less-than`.
         -   Homework `Arbolito` in branch `feature/christmas-tree`.
     -   We are covering the following topics:
         -   Classes
