@@ -1,6 +1,37 @@
 using System;
 
 public class Factory {
+  public static void ShowMenu() {
+    Console.WriteLine("Welcome...\n");
+    Console.WriteLine("Select you want: \n");
+    Console.WriteLine("|  1. Printing in console");
+    Console.WriteLine("|  2. Capturing and printing a Person in console");
+    Console.WriteLine("|  3. Finding greater and less than");
+    Console.WriteLine("|  4. Christmas tree");
+    Console.WriteLine("|  5. Exit\n");
+    Console.WriteLine("Please enter your choice: ");
+    int choice = int.Parse(Console.ReadLine());
+
+    switch (choice) {
+      case 1:
+        CreatePerson();
+        break;
+      case 2:
+        CreatePerson();
+        break;
+      case 3:
+        FindingGreaterAndLessThan();
+        break;
+      case 4:
+        Console.WriteLine("WIP!");
+        break;
+      case 5:
+      default:
+        Console.WriteLine("Chaito pue!");
+        break;
+    }
+  }
+
   public static void CreatePerson() {
     Console.WriteLine("Welcome...\n");
     Console.WriteLine("Please enter your Name: ");
@@ -17,6 +48,22 @@ public class Factory {
     Console.WriteLine($"\n\nHello {p.Name} {p.LastName}, You are registered now.\n");
     Console.WriteLine($"{p.ShowMe()}");
     Console.WriteLine($"{p.ExtraInfo()}");
+    Console.ReadLine();
+  }
+
+  public static void FindingGreaterAndLessThan() {
+    Console.WriteLine("Welcome...\n");
+    Console.WriteLine("Please enter 3 random numbers.");
+    Console.WriteLine("|    Please, press enter after each number: "); 
+    int num1 = int.Parse(Console.ReadLine());
+    int num2 = int.Parse(Console.ReadLine());
+    int num3 = int.Parse(Console.ReadLine());
+
+    List<int> numbers = new List<int> { num1, num2, num3 };
+
+    Console.WriteLine($"The numbers are: {num1}, {num2}, {num3}");
+    Console.WriteLine($"The greater number is: {MathsFactory.FindingGreater(numbers)}");
+    Console.WriteLine($"The smaller number is: {MathsFactory.FindingLessThan(numbers)}");
     Console.ReadLine();
   }
 }

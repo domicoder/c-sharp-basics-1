@@ -6,7 +6,7 @@ namespace Assignment1
     {
         static void Main(string[] args)
         {
-          Factory.CreatePerson();
+          Factory.ShowMenu();
         }
     }
 }
