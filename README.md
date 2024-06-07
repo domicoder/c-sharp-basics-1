@@ -55,3 +55,19 @@ dotnet publish -c Release -o ./publish
 
 -   Make a program that allows to capture your First Name, Last Name, Age, and create 3 constants with values of 50,
     33.2, "Alpha Prime" and display it by screen
+
+    -   We are covering:
+        -   Homework `Hola Mundo` in branch `main`.
+        -   Homework `Programa consola` in branch `main`.
+        -   Homework `Mayor y menor` in branch `feature/greater-than-or-equal-to`.
+        -   Homework `Arbolito` in branch `feature/christmas-tree`.
+    -   We are covering the following topics:
+        -   Classes
+        -   Constructors
+        -   Encapsulation
+        -   Methods
+        -   Static Methods
+
+-   Screenshot:
+
+![Result](https://img001.prntscr.com/file/img001/gYsF72ZbRSmZ8iPvIlcg1A.png)

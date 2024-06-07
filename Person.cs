@@ -79,26 +79,4 @@ class Person {
     message += $"|   String: {Const3}\n";
     return message;
   }
-
-  public void ShowPresentation() {
-    Console.WriteLine("Welcome...\n");
-    Console.WriteLine("Please enter your Name: ");
-    string name = Console.ReadLine();
-    Console.WriteLine("Please enter your Last Name: ");
-    string lastName = Console.ReadLine();
-    Console.WriteLine("Please enter your age: ");
-    string age = Console.ReadLine();
-    Console.WriteLine("Please enter your gender (male/female): ");
-    string gender = Console.ReadLine();
-
-    Name = name;
-    LastName = lastName;
-    Age = int.Parse(age);
-    Gender = gender;
- 
-    Console.WriteLine($"\n\nHello {Name} {LastName}, You are registered now.\n");
-    Console.WriteLine($"{ShowMe()}");
-    Console.WriteLine($"{ExtraInfo()}");
-    Console.ReadLine();
-  }
 }

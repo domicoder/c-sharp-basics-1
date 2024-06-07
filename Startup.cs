@@ -6,8 +6,7 @@ namespace Assignment1
     {
         static void Main(string[] args)
         {
-          Person p = new Person();
-          p.ShowPresentation();
+          Factory.CreatePerson();
         }
     }
 }
