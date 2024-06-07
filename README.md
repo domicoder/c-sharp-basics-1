@@ -70,4 +70,10 @@ dotnet publish -c Release -o ./publish
 
 -   Screenshot:
 
+![Result](https://img001.prntscr.com/file/img001/MRzscZSBQ22QZUfa9clfIQ.png)
+
 ![Result](https://img001.prntscr.com/file/img001/gYsF72ZbRSmZ8iPvIlcg1A.png)
+
+![Result](https://img001.prntscr.com/file/img001/zdq3J3f_Qr-FP3qhFfOgWA.png)
+
+![Result](https://img001.prntscr.com/file/img001/P3iRvAeFQTCUhBdXcdGWow.png)
