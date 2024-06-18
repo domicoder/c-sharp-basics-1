@@ -8,7 +8,8 @@ public class Factory {
     Console.WriteLine("|  2. Capturing and printing a Person in console");
     Console.WriteLine("|  3. Finding greater and less than");
     Console.WriteLine("|  4. Christmas tree");
-    Console.WriteLine("|  5. Exit\n");
+    Console.WriteLine("|  5. IMC calculator");
+    Console.WriteLine("|  0. Exit\n");
     Console.WriteLine("Please enter your choice: ");
     int choice = int.Parse(Console.ReadLine());
 
@@ -25,7 +26,10 @@ public class Factory {
       case 4:
         ChristmasTree();
         break;
-      case 5:
+      case 5: // IMC calculator
+        ShowMenuIMCCalculator();
+        break;
+      case 0:
       default:
         Console.WriteLine("Chaito pue!");
         break;
@@ -106,5 +110,79 @@ public class Factory {
         Console.WriteLine("");
       }
     }
+  }
+
+  public static void ShowMenuIMCCalculator() {
+    Console.WriteLine("Welcome...\n");
+
+    Console.WriteLine("|  1. Weight in Kg");
+    Console.WriteLine("|  2. Weight in Pounds");
+    Console.WriteLine("Please enter your choice: ");
+    int choice = int.Parse(Console.ReadLine());
+
+    switch (choice) {
+      case 1:
+        CalculatingIMCDataWithKg();
+        break;
+      case 2:
+        CalculatingIMCDataWithPounds();
+        break;
+      default:
+        Console.WriteLine("Chaito pue!");
+        break;
+    }
+  }
+
+  public static void CalculatingIMCDataWithKg() {
+    double IMC, heightInMeters, weightInKg;
+
+    Console.WriteLine("Input your height in meters (ex. 1.8): ");
+    heightInMeters = double.Parse(Console.ReadLine());
+    Console.WriteLine("Input your weight in Kg: ");
+    weightInKg = double.Parse(Console.ReadLine());
+
+    IMC = MathsFactory.CalculatingIMC(weightInKg, heightInMeters);
+
+    CalculatingIMC(IMC);
+
+  }
+
+  public static void CalculatingIMCDataWithPounds() {
+    double IMC, heightInMeters, weightInPounds;
+
+    Console.WriteLine("Input your height in meters (ex. 1.8): ");
+    heightInMeters = double.Parse(Console.ReadLine());
+    Console.WriteLine("Input your weight in Pounds: ");
+    weightInPounds = double.Parse(Console.ReadLine());
+
+    double weightInKg = weightInPounds / 2.20462;
+
+    IMC = MathsFactory.CalculatingIMC(weightInKg, heightInMeters);
+
+    CalculatingIMC(IMC);
+  }
+
+  public static void CalculatingIMC(double IMC) {
+    if(IMC<16)
+      Console.WriteLine("Criteria for admission to hospital."); // Criterio de ingreso en hospital.
+    if(IMC>=16&&IMC<17)
+      Console.WriteLine("Underweight."); // Infrapeso
+    if(IMC>=17&&IMC<18)
+      Console.WriteLine("Low weight."); // Bajo peso
+    if(IMC>=18&&IMC<25)
+      Console.WriteLine("Normal weight (healthy)."); // Peso normal (saludable)
+    if(IMC>=5&&IMC<30)
+      Console.WriteLine("Overweight (grade I obesity)."); // Sobrepeso (obesidad de grado I)
+    if(IMC>=30&&IMC<35)
+      Console.WriteLine("Chronically overweight (grade II obesity)."); // Sobrepeso cronico (obesidad de grado II)
+    if(IMC>=35&&IMC<40)
+      Console.WriteLine("Premobited obesity (grade III obesity)."); // Obesidad premobida (obesidad de grado III)
+    if(IMC>=40)
+      Console.WriteLine("Morbid obesity (grade IV obesity))."); // Obesidad morbida (obesidad de grado IV)
+
+    Console.WriteLine("Your IMC is: " + IMC);
+    Console.WriteLine();
+    Console.Write("Press a key to continue...");
+    Console.ReadKey();
   }
 }
